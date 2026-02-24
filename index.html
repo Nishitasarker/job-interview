@@ -41,96 +41,101 @@
 </header>
 
 
-<main class="pt-8">
+<section class="pt-8">
     <div id="available-jobs"><h1 class="font-bold text-2xl mb-4" >Available Jobs</h1> 
      <span id="total-job"> 8 Jobs</span>
 </div>
+</section>
 
+
+
+<main>
 
     <div class="flex gap-10 mb-4 ">
         <div><button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn bg-blue-800 text-white py-2 px-8 shadow">All</button>
 </div>
         
-<div><button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn"  class="btn py-2 px-8 bg-white shadow">Interview</button>
+<div><button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn"  class="btn bg-blue-800 py-2 px-8 text-white shadow">Interview</button>
 </div>
     
-<div><button onclick="toggleStyle('rejected-filter-btn')"  id="rejected-filter-btn" class="btn py-2 px-8 bg-white shadow">Rejected</button>
+<div><button onclick="toggleStyle('rejected-filter-btn')"  id="rejected-filter-btn" class="btn bg-blue-800 py-2 px-8 text-white shadow">Rejected</button>
    </div>
 </div>
+
+<section id="filter-section">
+
+</section>
 
 
 <section id="all-cards" >
 
    <!-- card-1 -->
 <div class="job-card bg-white pt-4 pl-2 mb-4 shadow-md">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
     Mobile First Corp
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">React Native Developer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">React Native Developer</p>
    <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Remote
     <li>Full-time</li>
     <li>$130,000-$175,000</li>
    </ol>
    <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Build cross-platform mobile applications using React Native.Work on products used by millions of users worldwide.</p>
+   <p class="text pt-3">Build cross-platform mobile applications using React Native.Work on products used by millions of users worldwide.</p>
 <div class="flex gap-5 py-3">
-   <div  class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow"> 
-      <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow">
-   <button class=" text-red-500">REJECTED</button></div>
+     <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
 </div>
-
 
 <!-- card-2 -->
 
 <div class=" job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
     WebFlow Agency
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">Web Designer & Developer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">Web Designer & Developer</p>
    <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Los Angeles,CA
     <li>Part-time</li>
     <li>$80,000-$120,000</li>
    </ol>
  <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+   <p class="text pt-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
 <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 py-2 px-3 rounded-sm hover:bg-green-300 shadow">
-       <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 rounded-sm py-2 px-3 hover:bg-red-300  shadow">
-    <button class=" text-red-500">REJECTED</button></div>
+   <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
+
 </div>
 
 <!-- card-3 -->
 <div class=" job-card bg-white pt-4 pl-2 mb-4 shadow-sm" >
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
     DataViz Solutions
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">Data Visualization Specialist</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">Data Visualization Specialist</p>
 <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Boston,MA
     <li>Full-time</li>
     <li>$125,000-$165,000</li>
    </ol>
 <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+   <p class="text pt-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
 <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 py-2 px-3 hover:bg-green-300 rounded-sm shadow"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 py-2 px-3 hover:bg-red-300 rounded-sm shadow"><button class=" text-red-500">REJECTED</button></div>
+   <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
+
 </div>
 
 
 <!-- card-4 -->
 <div class=" job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
    CloudFirst Inc
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">Backend Developer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">Backend Developer</p>
  <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Seattle,WA
     <li>Full-time</li>
@@ -139,20 +144,21 @@
 
    
    <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+   <p class="text pt-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 py-2 px-3 hover:bg-green-300 shadow rounded-sm"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 py-2 px-3  hover:bg-red-300 shadow rounded-sm"><button class=" text-red-500">REJECTED</button></div>
+   <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
+
 </div>
 </div>
 
 
 <!-- card-5 -->
 <div class="  job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class=" job-title font-bold text-xl mb-4 pt-5">
    Innovation Labs
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">UI/UX Engineer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">UI/UX Engineer</p>
  <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Austin,TX
     <li>Full-time</li>
@@ -160,70 +166,74 @@
    </ol>
 
    <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+   <p class="text pt-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
    <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 py-2 px-3 hover:bg-green-300 shadow rounded-sm"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 py-2 px-3 hover:bg-red-300 shadow rounded-sm"><button class=" text-red-500">REJECTED</button></div>
-</div>
+      <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
+   </div>
+
 </div>
 
 
 <!-- card-6 -->
 <div class="job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
     MegaCorp Solutions
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">JavaScript Developer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">JavaScript Developer</p>
    <ol class="job-details-list text-gray-400 pt-6 pb-3">
     New York,NY
     <li>Full-time</li>
     <li>$130,000-$170,000</li>
    </ol>
    <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Build enterprise applications with JavaScript and modern frameworks. We offer compensation, health insurance, and professional development opportunities.</p>
+   <p class="text pt-3">Build enterprise applications with JavaScript and modern frameworks. We offer compensation, health insurance, and professional development opportunities.</p>
 <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 hover:bg-green-300 shadow rounded-sm py-2 px-3"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 hover:bg-red-300 shadow rounded-sm py-2 px-3"><button class=" text-red-500">REJECTED</button></div>
+   <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
+
 </div>
 
 
 <!-- card-7 -->
 <div class=" job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class=" job-title font-bold text-xl mb-4 pt-5">
     StartupXYZ
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">Full Stack Engineer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">Full Stack Engineer</p>
    <ol class="job-details-list text-gray-400 pt-6 pb-3">
     Remote
     <li>Full-time</li>
     <li>$120,000-$160,000</li>
    </ol>
    <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required.Great benefits and equity package included.</p>
+   <p class="text pt-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required.Great benefits and equity package included.</p>
 <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 py-2 px-3 hover:bg-green-300 shadow rounded-sm"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 py-2 px-3 hover:bg-red-300 shadow rounded-sm"><button class=" text-red-500">REJECTED</button></div>
+  <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
+
 </div>
 
 <!-- card-8 -->
 <div class=" job-card bg-white pt-4 pl-2 mb-4 shadow-sm">
-   <h3 class="  font-bold text-xl mb-4 pt-5">
+   <h3 class="job-title  font-bold text-xl mb-4 pt-5">
    TechCorp Industries
    </h3> 
-   <p class="text-gray-400 font-bold m-0 py-0">Senior Frontend Developer</p>
+   <p class="job-type text-gray-400 font-bold m-0 py-0">Senior Frontend Developer</p>
 <ol class="job-details-list text-gray-400 pt-6 pb-3">
     San Francisco,CA
     <li>Full-time</li>
     <li>$130,000-$175,000</li>
    </ol>
 <!-- <button class="bg-gray-400 text-blue-100 font-semibold py-2 px-3 rounded-sm shadow">NOT APPLIED</button> -->
-   <p class="pt-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting- <br> edge projects</p>
+   <p class="text pt-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting- <br> edge projects</p>
   <div class="flex gap-5 py-3">
-   <div class="interview-btn border-2 border-green-500 hover:bg-green-300 shadow rounded-sm py-2 px-3"> <button class=" text-green-500">INTERVIEW</button></div>
-<div class="border-2 border-red-500 hover:bg-red-300 shadow rounded-sm py-2 px-3"><button class=" text-red-500">REJECTED</button></div>
+   <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 hover rounded-sm shadow text-green-500">INTERVIEW</button>
+   <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm  py-2 px-3 shadow text-red-500">REJECTED</button>
 </div>
+
 </div>
 
 </section>

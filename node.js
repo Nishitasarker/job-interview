@@ -37,7 +37,7 @@ const rejectedFilterBtn = document.getElementById("rejected-filter-btn");
 
 const allCardSection = document.getElementById("all-cards");
 const mainContainer = document.querySelector('main');
-
+const filterSection = document.getElementById('filter-section');
 
 function allCardCount(){
     total.innerText=allCardSection.children.length;
@@ -48,5 +48,52 @@ allCardCount();
 
 
 function toggleStyle(id){
-    allFilterBtn.classList.remove('bg')
+    allFilterBtn.classList.remove('bg-blue-800','text-white');
+    interviewFilterBtn.classList.remove('bg-blue-800','text-white');
+    rejectedFilterBtn.classList.remove('bg-blue-800','text-white');
+
+
+    allFilterBtn.classList.add('bg-gray-300','text-black');
+    interviewFilterBtn.classList.add('bg-gray-300','text-black');
+    rejectedFilterBtn.classList.add('bg-gray-300','text-black');
+
+
+    const selected = document.getElementById(id);
+    selected.classList.remove('bg-gray-300','text-black');
+selected.classList.add('bg-blue-800','text-white');
+}
+
+
+mainContainer.addEventListener('click', function(event){
+                       event.target.closest('.job-card');
+    const parentNode = event.target.parentNode.parentNode;
+    const jobTitle = parentNode.querySelector('.job-title').innerText;
+    const jobType = parentNode.querySelector('.job-type').innerText;
+    const jobDetailsList = parentNode.querySelector('.job-details-list').innerText;
+    const text = parentNode.querySelector('.text').innerText;
+    
+const cardInfo={
+    jobTitle,
+    jobType,
+    jobDetailsList,
+    text
+};
+
+const jobTitleExist = interviewList.find(item=> item.jobTitle == cardInfo.jobTitle)
+
+if(!jobTitleExist){
+    interviewList.push(cardInfo);
+}
+})
+
+
+function renderThriving(){
+    filterSection.innerHTML='';
+
+
+    for(let Thrive of renderThriving){
+        let div=document.createElement('div');
+        div.className=``
+        div.innerHTML=``
+    }
 }
