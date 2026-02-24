@@ -15,8 +15,32 @@
     text-align: center;
 }
 
-.list{
+.job-details-list{
     display: flex;
     list-style:disc;
     gap: 30px;
+}
+
+#available-jobs{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.btn:hover{
+    background-color: blue;
+    color:white
+}
+
+
+.section-cls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-cls img{
+    margin: 0px auto;
+    margin-top:60px ;
 }
