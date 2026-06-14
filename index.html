@@ -44,12 +44,16 @@
 
         <main>
             <div class="flex gap-10 mb-4">
-                <div><button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn bg-blue-800 text-white py-2 px-8 shadow">All</button></div>
-                <div><button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn bg-blue-800 py-2 px-8 text-white shadow">Interview</button></div>
-                <div><button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-blue-800 py-2 px-8 text-white shadow">Rejected</button></div>
+                <div><button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn bg-blue-800 text-white py-2 px-8 shadow transition-all">All</button></div>
+                <div><button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn bg-gray-400 py-2 px-8 text-white shadow transition-all">Interview</button></div>
+                <div><button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-gray-400 py-2 px-8 text-white shadow transition-all">Rejected</button></div>
             </div>
 
             <section id="filter-section"></section>
+
+            <div id="no-jobs-msg" class="hidden text-gray-500 text-center py-10 font-semibold text-lg">
+                No jobs found in this section.
+            </div>
 
             <section id="all-cards">
 
@@ -65,10 +69,10 @@
                         <p class="text pt-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div> 
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -85,10 +89,10 @@
                         <p class="text pt-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -105,10 +109,10 @@
                         <p class="text pt-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -125,10 +129,10 @@
                         <p class="text pt-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -145,10 +149,10 @@
                         <p class="text pt-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -165,10 +169,10 @@
                         <p class="text pt-3">Build enterprise applications with JavaScript and modern frameworks. We offer compensation, health insurance, and professional development opportunities.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -185,10 +189,10 @@
                         <p class="text pt-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -205,10 +209,10 @@
                         <p class="text pt-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects</p>
                         <div class="flex gap-5 py-3">
                             <button class="interview-btn border-2 border-green-500 hover:bg-green-300 py-2 px-3 rounded-sm shadow text-green-500 font-semibold transition-colors">INTERVIEW</button>
-                            <button class="border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold">REJECTED</button>
+                            <button class="rejected-btn border-2 border-red-500 hover:bg-red-300 rounded-sm py-2 px-3 shadow text-red-500 font-semibold transition-colors">REJECTED</button>
                         </div>
                     </div>
-                    <div class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6">
+                    <div class="trash-btn w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full ml-4 cursor-pointer mr-8 mt-6 hover:bg-red-100">
                         <i class="fa-regular fa-trash-can"></i>
                     </div>
                 </div>
@@ -218,40 +222,164 @@
     </div>
 
     <script>
-        // সব ইন্টারভিউ বাটন এবং কাউন্টার স্প্যান সিলেক্ট করা
-        const interviewButtons = document.querySelectorAll('.interview-btn');
+        const jobCards = document.querySelectorAll('.job-card');
         const interviewCountEl = document.getElementById('interview-count');
+        const rejectedCountEl = document.getElementById('rejected-count');
+        const noJobsMsg = document.getElementById('no-jobs-msg');
+        
+        let currentFilter = 'all';
 
-        // প্রতিটি বাটনে ক্লিক ইভেন্ট সেট করা
-        interviewButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                // বাটনের সবচেয়ে কাছের প্যারেন্ট কার্ডটি খুঁজে বের করা
-                const jobCard = button.closest('.job-card');
-                
-                // কার্ডের বাম পাশে Tailwind বর্ডার টগল করা
-                jobCard.classList.toggle('border-l-4');
-                jobCard.classList.toggle('border-green-500');
-                
-                // বাটনের একটিভ স্টেট (ব্যাকগ্রাউন্ড ও টেক্সট) চেঞ্জ করা
-                button.classList.toggle('bg-green-500');
-                button.classList.toggle('text-white');
-                button.classList.toggle('text-green-500');
+        // প্রতিটি কার্ড ট্র্যাক করার জন্য ডাইনামিক ডাটা সেট করা
+        jobCards.forEach((card, index) => {
+            card.dataset.status = 'all'; // শুরুতে সবার স্ট্যাটাস ডিফল্ট 'all'
+            
+            const interviewBtn = card.querySelector('.interview-btn');
+            const rejectedBtn = card.querySelector('.rejected-btn');
+            const trashBtn = card.querySelector('.trash-btn');
 
-                // কাউন্টার সংখ্যা আপডেট করার লজিক
-                let currentCount = parseInt(interviewCountEl.textContent);
-                
-                if (jobCard.classList.contains('border-green-500')) {
-                    interviewCountEl.textContent = currentCount + 1;
+            // ১. ইন্টারভিউ বাটনে ক্লিক ইভেন্ট
+            interviewBtn.addEventListener('click', function() {
+                if (card.dataset.status === 'interview') {
+                    card.dataset.status = 'all';
+                    resetCardStyles(card, interviewBtn);
                 } else {
-                    interviewCountEl.textContent = currentCount - 1;
+                    card.dataset.status = 'interview';
+                    applyInterviewStyles(card, interviewBtn, rejectedBtn);
                 }
+                updateCounters();
+                filterCards(); // ক্লিক করার সাথে সাথে কার্ডটি সরাতে ফিল্টার রান করা হলো
+            });
+
+            // ২. রিজেক্টেড বাটনে ক্লিক ইভেন্ট
+            rejectedBtn.addEventListener('click', function() {
+                if (card.dataset.status === 'rejected') {
+                    card.dataset.status = 'all';
+                    resetCardStyles(card, rejectedBtn);
+                } else {
+                    card.dataset.status = 'rejected';
+                    applyRejectedStyles(card, rejectedBtn, interviewBtn);
+                }
+                updateCounters();
+                filterCards(); // ক্লিক করার সাথে সাথে কার্ডটি সরাতে ফিল্টার রান করা হলো
+            });
+
+            // ৩. ট্র্যাশ বা ডিলিট বাটন ইভেন্ট
+            trashBtn.addEventListener('click', function() {
+                card.remove();
+                updateCounters();
+                updateTotalCount();
+                filterCards();
             });
         });
 
-        // ফিল্টার বাটনের জন্য ডামি ফাংশন (যাতে কনসোলে এরর না আসে)
-        function toggleStyle(btnId) {
-            console.log(btnId + " clicked");
+        // স্টাইল পরিবর্তন করার হেল্পার ফাংশনসমূহ
+        function applyInterviewStyles(card, intBtn, rejBtn) {
+            card.className = card.className.replace(/border-l-4|border-red-500/g, '').trim();
+            card.classList.add('border-l-4', 'border-green-500');
+            
+            intBtn.classList.add('bg-green-500', 'text-white');
+            intBtn.classList.remove('text-green-500');
+
+            rejBtn.classList.remove('bg-red-500', 'text-white');
+            rejBtn.classList.add('text-red-500');
         }
+
+        function applyRejectedStyles(card, rejBtn, intBtn) {
+            card.className = card.className.replace(/border-l-4|border-green-500/g, '').trim();
+            card.classList.add('border-l-4', 'border-red-500');
+            
+            rejBtn.classList.add('bg-red-500', 'text-white');
+            rejBtn.classList.remove('text-red-500');
+
+            intBtn.classList.remove('bg-green-500', 'text-white');
+            intBtn.classList.add('text-green-500');
+        }
+
+        function resetCardStyles(card, btn) {
+            card.classList.remove('border-l-4', 'border-green-500', 'border-red-500');
+            btn.classList.remove('bg-green-500', 'bg-red-500', 'text-white');
+            if(btn.classList.contains('interview-btn')) {
+                btn.classList.add('text-green-500');
+            } else {
+                btn.classList.add('text-red-500');
+            }
+        }
+
+        // ৪. ইন্টারভিউ এবং রিজেক্ট কাউন্টার আপডেট করা
+        function updateCounters() {
+            const totalInterview = document.querySelectorAll('.job-card[data-status="interview"]').length;
+            const totalRejected = document.querySelectorAll('.job-card[data-status="rejected"]').length;
+            
+            interviewCountEl.textContent = totalInterview;
+            rejectedCountEl.textContent = totalRejected;
+            
+            updateTotalCount(); // যখনই কোনো স্ট্যাটাস বদলাবে 'Total' কাউন্টও আপডেট হবে
+        }
+
+        // ৫. টোটাল কার্ডের সংখ্যা আপডেট করা (শুধুমাত্র পেন্ডিং বা 'all' কার্ডগুলোর হিসাব রাখবে)
+        function updateTotalCount() {
+            const currentTotal = document.querySelectorAll('.job-card[data-status="all"]').length;
+            document.getElementById('total').textContent = currentTotal;
+            document.getElementById('total-job').textContent = `${currentTotal} Jobs`;
+        }
+
+        // ৬. স্ক্রিনে কার্ড লুকানো বা দেখানোর ফিল্টারিং লজিক
+        function filterCards() {
+            let visibleCardsCount = 0;
+            const allRemainingCards = document.querySelectorAll('.job-card');
+
+            allRemainingCards.forEach(card => {
+                // যদি 'All' ফিল্টার থাকে, তবে কেবল 'all' স্ট্যাটাসের কার্ড দেখাবে (ইন্টারভিউ বা রিজেক্টেডগুলো হাইড হবে)
+                if (currentFilter === 'all' && card.dataset.status === 'all') {
+                    card.style.display = 'flex';
+                    visibleCardsCount++;
+                } 
+                // অন্য ফিল্টারের (Interview/Rejected) ক্ষেত্রে স্ট্যাটাস মিললে দেখাবে
+                else if (currentFilter !== 'all' && card.dataset.status === currentFilter) {
+                    card.style.display = 'flex';
+                    visibleCardsCount++;
+                } 
+                // কোনো কন্ডিশন না মিললে কার্ড হাইড হবে
+                else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // যদি নির্দিষ্ট ফিল্টারে কোনো কার্ড খালি থাকে তবে মেসেজ শো করবে
+            if (visibleCardsCount === 0) {
+                noJobsMsg.classList.remove('hidden');
+            } else {
+                noJobsMsg.classList.add('hidden');
+            }
+        }
+
+        // ৭. ফিল্টার বাটনগুলোর ব্যাকগ্রাউন্ড কালার টগল করার মেইন ফাংশন
+        function toggleStyle(btnId) {
+            const allBtn = document.getElementById('all-filter-btn');
+            const interviewBtn = document.getElementById('interview-filter-btn');
+            const rejectedBtn = document.getElementById('rejected-filter-btn');
+
+            // সব ফিল্টার বাটনকে আগে ডিফল্ট গ্রে (bg-gray-400) করা
+            [allBtn, interviewBtn, rejectedBtn].forEach(btn => {
+                btn.classList.remove('bg-blue-800');
+                btn.classList.add('bg-gray-400');
+            });
+
+            // একটিভ হওয়া ফিল্টার বাটনকে গাঢ় নীল (bg-blue-800) করা
+            const clickedBtn = document.getElementById(btnId);
+            clickedBtn.classList.remove('bg-gray-400');
+            clickedBtn.classList.add('bg-blue-800');
+
+            // ফিল্টার স্টেট পরিবর্তন করা
+            if (btnId === 'all-filter-btn') currentFilter = 'all';
+            if (btnId === 'interview-filter-btn') currentFilter = 'interview';
+            if (btnId === 'rejected-filter-btn') currentFilter = 'rejected';
+
+            filterCards();
+        }
+
+        // পেজ একদম প্রথমবার লোড হওয়ার সময় রান করা
+        filterCards();
     </script>
 </body>
 </html>
