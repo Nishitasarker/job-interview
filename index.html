@@ -256,36 +256,36 @@
         
         let currentFilter = 'all';
 
-        // প্রতিটি কার্ডের ডাটা সেটআপ ও ইভেন্ট হ্যান্ডলার
+       
         jobCards.forEach((card) => {
-            card.dataset.status = 'all'; // ডিফল্ট স্ট্যাটাস অল
+            card.dataset.status = 'all'; 
             
             const interviewBtn = card.querySelector('.interview-btn');
             const rejectedBtn = card.querySelector('.rejected-btn');
             const trashBtn = card.querySelector('.trash-btn');
             const badgeContainer = card.querySelector('.badge-container');
 
-            // ১. ইন্টারভিউ বাটন ক্লিক
+          
             interviewBtn.addEventListener('click', function() {
                 if (card.dataset.status === 'interview') {
                     card.dataset.status = 'all';
                     resetCardStyles(card, interviewBtn);
-                    badgeContainer.innerHTML = ''; // ব্যাজ রিমুভ
+                    badgeContainer.innerHTML = '';
                 } else {
                     card.dataset.status = 'interview';
                     applyInterviewStyles(card, interviewBtn, rejectedBtn);
                     badgeContainer.innerHTML = `<span class="badge badge-success text-white font-bold px-3 py-2 rounded">Interview</span>`;
                 }
                 updateCounters();
-                filterCards(); // ফিল্টার স্টেট রি-চেক করবে
+                filterCards(); 
             });
 
-            // ২. রিজেক্টেড বাটন ক্লিক
+            
             rejectedBtn.addEventListener('click', function() {
                 if (card.dataset.status === 'rejected') {
                     card.dataset.status = 'all';
                     resetCardStyles(card, rejectedBtn);
-                    badgeContainer.innerHTML = ''; // ব্যাজ রিমুভ
+                    badgeContainer.innerHTML = ''; 
                 } else {
                     card.dataset.status = 'rejected';
                     applyRejectedStyles(card, rejectedBtn, interviewBtn);
@@ -295,7 +295,7 @@
                 filterCards();
             });
 
-            // ৩. ট্র্যাশ বাটন ক্লিক
+            
             trashBtn.addEventListener('click', function() {
                 card.remove();
                 updateCounters();
@@ -303,7 +303,7 @@
             });
         });
 
-        // স্টাইল চেঞ্জ হেল্পারস
+        
         function applyInterviewStyles(card, intBtn, rejBtn) {
             card.classList.remove('border-transparent', 'border-red-500');
             card.classList.add('border-green-500');
@@ -337,7 +337,7 @@
             }
         }
 
-        // ৪. ইন্টারভিউ ও রিজেক্টেড মেইন কাউন্টার আপডেট
+       
         function updateCounters() {
             const totalInterview = document.querySelectorAll('.job-card[data-status="interview"]').length;
             const totalRejected = document.querySelectorAll('.job-card[data-status="rejected"]').length;
@@ -346,11 +346,11 @@
             rejectedCountEl.textContent = totalRejected;
         }
 
-        // ৫. কার্ড ফিল্টারিং ও কন্ডিশনাল হেডার কাউন্ট লজিক
+        
         function filterCards() {
             let visibleCardsCount = 0;
             const allRemainingCards = document.querySelectorAll('.job-card');
-            const totalRemainingCount = allRemainingCards.length; // ট্র্যাশ করার পর মোট যত কার্ড বাঁচে
+            const totalRemainingCount = allRemainingCards.length; 
 
             allRemainingCards.forEach(card => {
                 if (currentFilter === 'all') {
@@ -366,10 +366,10 @@
                 }
             });
 
-            // ডাইনামিক হেডার কাউন্ট আপডেট
+            
             document.getElementById('total').textContent = totalRemainingCount;
             
-            // ফিল্টার অনুযায়ী টেক্সট ফরম্যাট চেঞ্জ করা
+           
             const totalJobEl = document.getElementById('total-job');
             if (currentFilter === 'all') {
                 totalJobEl.textContent = `${totalRemainingCount} Jobs`;
@@ -377,7 +377,7 @@
                 totalJobEl.textContent = `${visibleCardsCount} of ${totalRemainingCount} Jobs`;
             }
 
-            // কোনো কার্ড না থাকলে নোটিফিকেশন মেসেজ
+            
             if (visibleCardsCount === 0) {
                 noJobsMsg.classList.remove('hidden');
             } else {
@@ -385,7 +385,7 @@
             }
         }
 
-        // ৬. ফিল্টার বাটন টগল কালার
+        
         function toggleStyle(btnId) {
             const allBtn = document.getElementById('all-filter-btn');
             const interviewBtn = document.getElementById('interview-filter-btn');
@@ -407,7 +407,7 @@
             filterCards();
         }
 
-        // ইনিশিয়াল রান
+       
         filterCards();
     </script>
 </body>
